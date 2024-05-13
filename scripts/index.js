@@ -19,7 +19,14 @@ function populatetable(){
             cell1.innerHTML = data[i].courseName;
             cell2.innerHTML = data[i].courseNum;
             cell3.innerHTML = data[i].dept;
- 
+            const detailsCell = row.insertCell();
+
+            let anchor = document.createElement("a");
+            anchor.href = "detail.html?cid=" + data[i].id;
+            //anchor.href = "detail.html?cid=3" ;
+            anchor.text = "See details";  
+            detailsCell.appendChild(anchor);
+            
 
     }
 
